@@ -39,7 +39,3 @@ Podemos gerar toda estrutura para um crud através do generate resource
 ```sh
 nest generate resource
 ```
-
-
-Parei em 20m
-https://www.youtube.com/watch?v=ITc0oDwY3CA
