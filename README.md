@@ -19,6 +19,7 @@ Se tiver usando VSCode é intessante instalar alguns plugins, para ajudar na for
 - Prettier - Code formatter (Prettier).
 - ESLint (Microsoft).
 - Rest Client (Rest Client)
+- Prisma
 
 Roda o projeto
 ```sh
@@ -38,4 +39,18 @@ nest generate controller products
 Podemos gerar toda estrutura para um crud através do generate resource
 ```sh
 nest generate resource
+```
+
+Instala Prisma
+```sh
+npm install @prima/client
+```
+Inicia projeto prisma
+```sh
+npx prisma init
+```
+
+Criar tabelas com base nas models com prisma
+```sh
+npx prisma migrate dev
 ```
