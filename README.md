@@ -54,3 +54,8 @@ Criar tabelas com base nas models com prisma
 ```sh
 npx prisma migrate dev
 ```
+
+Instala libs para validação do request
+```sh
+npm install class-validator class-transformer
+```
