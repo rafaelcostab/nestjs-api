@@ -1,18 +1,18 @@
 import { Module, OnModuleInit } from '@nestjs/common';
-import { ProductsService } from './products.service';
-import { ProductsController } from './products.controller';
-import { PrismaModule } from 'src/prisma/prisma.module';
+import { AdminProductsService } from './products/admin/admin-products.service';
+import { AdminProductsController } from './products/admin/admin-products.controller';
 import { PrismaService } from 'src/prisma/prisma.service';
+import { ProductsController } from './products/public/products.controller';
+import { ProductsService } from './products/public/products.service';
 
 @Module({
-  imports: [PrismaModule, ProductsModule],
-  controllers: [ProductsController],
-  providers: [ProductsService],
+  controllers: [AdminProductsController, ProductsController],
+  providers: [AdminProductsService, ProductsService],
 })
 export class ProductsModule implements OnModuleInit {
   constructor(
     private prismaService: PrismaService,
-    private productService: ProductsService,
+    private productService: AdminProductsService,
   ) {}
 
   async onModuleInit() {
