@@ -50,6 +50,14 @@ Inicia projeto prisma
 npx prisma init
 ```
 
+Variável de ambiente   
+No diretório `prisma` o arquivo `schema.prisma` configura uma variável de ambiente `DATABASE_URL`, essa variável de ambiente é configura no arquivo `.env` na raiz do projeto. O Prisma cria a configuração para o bando de dados postgresql, mas nesse exemplo utilizaremos o Sqlite.
+
+No arquivo `.env` configure a url com caminho para o arquivo
+```sh
+DATABASE_URL="file:./database.sqlite"
+```
+
 Criar tabelas com base nas models com prisma
 ```sh
 npx prisma migrate dev
