@@ -43,7 +43,7 @@ nest generate resource
 
 Instala Prisma
 ```sh
-npm install @prima/client
+npm install @prisma/client
 ```
 Inicia projeto prisma
 ```sh
