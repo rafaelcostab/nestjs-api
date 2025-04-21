@@ -67,3 +67,18 @@ Instala libs para validação do request
 ```sh
 npm install class-validator class-transformer
 ```
+
+Instala libs para criptografia de senhas
+```sh
+npm install bcrypt
+```
+
+Instala tipagem do bcrypt
+```sh
+npm install @types/bcrypt
+```
+
+Instala nestJs Jwt
+```sh
+npm install @nestjs/jwt
+```

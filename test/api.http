@@ -1,3 +1,13 @@
+###
+# @name admin_jwt_login
+Post http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@user.com",
+  "password": "secret"
+}
+
 GET http://localhost:3000/prefixo/hello
 
 ###
@@ -38,3 +48,9 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/admin/products/{{productId}}
+
+### open products
+GET http://localhost:3000/products?page=1
+
+###
+GET http://localhost:3000/products?slug=cm9bet5ev0002kxn36rtvaev3

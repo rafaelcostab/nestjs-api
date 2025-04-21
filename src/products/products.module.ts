@@ -1,9 +1,9 @@
 import { Module, OnModuleInit } from '@nestjs/common';
-import { AdminProductsService } from './products/admin/admin-products.service';
-import { AdminProductsController } from './products/admin/admin-products.controller';
+import { AdminProductsService } from './admin/admin-products.service';
+import { AdminProductsController } from './admin/admin-products.controller';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { ProductsController } from './products/public/products.controller';
-import { ProductsService } from './products/public/products.service';
+import { ProductsController } from './public/products.controller';
+import { ProductsService } from './public/products.service';
 
 @Module({
   controllers: [AdminProductsController, ProductsController],
