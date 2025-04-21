@@ -8,6 +8,7 @@ Content-Type: application/json
   "password": "secret"
 }
 
+###
 GET http://localhost:3000/prefixo/hello
 
 ###
@@ -15,11 +16,13 @@ POST http://localhost:3000/
 
 ###
 GET http://localhost:3000/admin/products
+Authorization: Bearer {{ jwt }}
 
 ###
 # @name createProduct
 POST http://localhost:3000/admin/products
 Content-Type: application/json
+Authorization: Bearer jwt
 
 {
     "name": "Product 1",
@@ -27,6 +30,9 @@ Content-Type: application/json
     "description": "Product 1 description",
     "price": 9.99
 }
+
+###
+@jwt = {{ admin_jwt_login.response.body.access_token }}
 
 ###
 @productId = {{createProduct.response.body.id}}
