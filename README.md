@@ -82,3 +82,33 @@ Instala nestJs Jwt
 ```sh
 npm install @nestjs/jwt
 ```
+
+## Docker
+
+execute o docker e no terminal usaremos os comandos
+
+```sh
+docker compose up --build
+```
+
+Em seguida entraremos no container para rodar a aplicação
+```sh
+docker compose exec app sh
+```
+
+Remova o node modules e instale novamente
+```sh
+rm -rf node_modules
+
+npm install
+```
+
+Em seguida execute o prisma para criar o banco de dados dentro do container
+```sh
+npx prisma migrate dev
+```
+
+Agora podemos rodar a aplicação
+```sh
+npm run start:dev
+```
